@@ -38,4 +38,11 @@ function downloadFile(fileUrl, outputLocationPath) {
 }
 
 
-downloadFile(ICON_DOWNLOAD_URL, 'iconfont111111.js');
+downloadFile(ICON_DOWNLOAD_URL, 'iconfont111111.js').then(()=>{
+    // 查看当前目录
+    fs.readdir('./', (err, files) => {
+        files.forEach(file => {
+          console.log(file);
+        });
+      });
+})
