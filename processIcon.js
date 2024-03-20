@@ -38,11 +38,18 @@ function downloadFile(fileUrl, outputLocationPath) {
 }
 
 
-downloadFile(ICON_DOWNLOAD_URL, 'iconfont111111.js').then(()=>{
+downloadFile(ICON_DOWNLOAD_URL, 'iconfont111111.js').then(() => {
     // 查看当前目录
     fs.readdir('./', (err, files) => {
         files.forEach(file => {
-          console.log(file);
+            console.log(file);
         });
-      });
+    });
+    // git执行查看到当前代码所在分支
+    const exec = require('child_process').exec;
+    exec('git branch', function (err, stdout, stderr) {
+        console.log(stdout);
+    });
+
+
 })
