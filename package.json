@@ -5,6 +5,9 @@
   "repository": "https://github.com/dingzc2450/action-test.git",
   "author": "zhicheng.Ding <ding25410@foxmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "node ./processIcon.js"
+  },
   "dependencies": {
     "https": "^1.0.0"
   }
